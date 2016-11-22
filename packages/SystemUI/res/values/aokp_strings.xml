@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* Copyright 2016, AOKP project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Screenrecord Notification Ticker -->
+    <string name="screenrecord_notif_ticker">Screen is being recorded</string>
+
+    <!-- Screenrecord notification title -->
+    <string name="screenrecord_notif_title">Recording screen</string>
+
+    <!-- Screenrecord notification action: Stop -->
+    <string name="screenrecord_notif_stop">Stop</string>
+
+    <!-- Screenrecord notification action: show/hide pointer -->
+    <string name="screenrecord_notif_pointer_on">Show pointer</string>
+    <string name="screenrecord_notif_pointer_off">Hide pointer</string>
+
+    <!-- Screen record notification error title -->
+    <string name="screenrecord_notif_error">Unable to record screen</string>
+
+    <!-- Quick Settings tiles -->
+    <string name="quick_settings_screenshot_label">Screenshot</string>
+    <string name="quick_settings_adb_network">ADB network</string>
+    <string name="quick_settings_network_adb_enabled_label">Enabled</string>
+    <string name="quick_settings_network_adb_disabled_label">Disabled</string>
+    <string name="quick_settings_sync_label">Sync</string>
+    <string name="accessibility_quick_settings_sync_off">Sync off</string>
+    <string name="accessibility_quick_settings_sync_on">Sync on</string>
+    <string name="accessibility_quick_settings_sync_changed_off">Sync turned off</string>
+    <string name="accessibility_quick_settings_sync_changed_on">Sync turned on</string>
+    <string name="quick_settings_expanded_desktop_label">Expanded desktop</string>
+    <string name="quick_settings_expanded_desktop">Expanded</string>
+    <string name="quick_settings_expanded_desktop_off">Normal</string>
+    <string name="quick_settings_reboot_label">Reboot</string>
+    <string name="quick_settings_reboot_recovery_label">Recovery</string>
+    <string name="accessibility_quick_settings_usb_tether_off">USB tethering off</string>
+    <string name="accessibility_quick_settings_usb_tether_on">USB tethering on</string>
+    <string name="accessibility_quick_settings_usb_tether_changed_off">USB tethering turned off</string>
+    <string name="accessibility_quick_settings_usb_tether_changed_on">USB tethering turned on</string>
+    <string name="quick_settings_usb_tether_label">USB tethering</string>
+    <string name="quick_settings_music_label">Music</string>
+    <string name="quick_settings_music_play">Play</string>
+    <string name="quick_settings_music_pause">Pause</string>
+    <string name="quick_settings_ime_tile_label">Input method</string>
+    <string name="quick_settings_caffeine_label">Caffeine</string>
+    <string name="accessibility_quick_settings_caffeine_off">Caffeine off</string>
+    <string name="accessibility_quick_settings_caffeine_on">Caffeine on</string>
+    <string name="quick_settings_powermenu_label">Power Menu</string>
+    <string name="quick_settings_screenrecord">Screenrecord</string>
+    <string name="quick_settings_screenrecord_on">Recording ...</string>
+    <string name="quick_settings_sleepscreen_label">Sleep Screen</string>
+    <string name="quick_settings_romcontrol_label">AOKP</string>
+    <string name="quick_settings_apppicker">App Picker</string>
+    <string name="quick_settings_heads_up_label">Heads up</string>
+    <string name="accessibility_quick_settings_heads_up_off">Heads up off</string>
+    <string name="accessibility_quick_settings_heads_up_on">Heads up on</string>
+    <string name="accessibility_quick_settings_heads_up_changed_off">Heads up turned off</string>
+    <string name="accessibility_quick_settings_heads_up_changed_on">Heads up turned on</string>
+    <string name="quick_settings_appcirclebar_title">AppCircleBar</string>
+    <string name="quick_settings_appcirclebar_on">AppCircleBar On</string>
+    <string name="quick_settings_appcirclebar_off">AppCircleBar Off</string>
+    <string name="quick_settings_gesture_anywhere_label">Gesture Anywhere</string>
+    <string name="quick_settings_gesture_anywhere_on">Gestures On</string>
+    <string name="quick_settings_gesture_anywhere_off">Gestures Off</string>
+    <string name="quick_settings_appsidebar_title">AppSideBar</string>
+    <string name="quick_settings_appsidebar_on">AppSideBar On</string>
+    <string name="quick_settings_appsidebar_off">AppSideBar Off</string>
+    <string name="quick_settings_pulse_enabled">Pulse Enabled</string>
+    <string name="quick_settings_pulse_disabled">No Visualizer</string>
+    <string name="quick_settings_pulse_label">Navigationbar Visualizer</string>
+    <string name="quick_settings_volume_panel_label">Volume</string>
+    <string name="accessibility_quick_settings_location_battery_saving">Location reporting: battery saving mode.</string>
+    <string name="accessibility_quick_settings_location_gps_only">Location reporting: sensors only mode.</string>
+    <string name="accessibility_quick_settings_location_high_accuracy">Location reporting: high accuracy mode.</string>
+    <string name="accessibility_quick_settings_location_changed_battery_saving">Location reporting changed to battery saving mode.</string>
+    <string name="accessibility_quick_settings_location_changed_gps_only">Location reporting changed to sensors only mode.</string>
+    <string name="accessibility_quick_settings_location_changed_high_accuracy">Location reporting changed to high accuracy mode.</string>
+    <string name="quick_settings_location_detail_title">Location mode</string>
+    <string name="quick_settings_location_battery_saving_label">Battery saving</string>
+    <string name="quick_settings_location_gps_only_label">Device only</string>
+    <string name="quick_settings_location_high_accuracy_label">High accuracy</string>
+    <string name="quick_settings_location_off_label">Location off</string>
+
+    <!-- Gesture Anywhere -->
+    <string name="gestures_message">Draw your gesture here</string>
+
+    <!-- App circle sidebar -->
+    <string name="app_float_maximize_item_title">Maximize</string>
+    <string name="app_float_item_title">Float view</string>
+    <string name="app_stop_item_title">Kill app</string>
+
+    <!-- App sidebar -->
+    <string name="default_folder_text">Folder</string>
+    <string name="title_activity_sidebar_configuration">Appbar content setup</string>
+    <string name="action_save">Save</string>
+    <string name="toast_items_saved">Appbar items have been saved.</string>
+    <string name="content_setup_instructions">Add items to the Appbar by long pressing any item on the right and drag it over to the Appbar.\n\nCombine items into folders by droping an item onto any existing item in the Appbar.\n\nTo remove an item simply drag it out of the \@appbar.</string>
+    <string name="content_setup_dismiss">Continue</string>
+    <string name="toast_not_installed">App is not installed</string>
+
+    <!-- Navigation bar Tile -->
+    <string name="quick_settings_navigation_bar">Navigation bar</string>
+    <string name="quick_settings_smartbar">SmartBar</string>
+    <string name="quick_settings_smartbar_off">SmartBar off</string>
+    <string name="quick_settings_fling">Fling</string>
+    <string name="quick_settings_fling_off">Fling off</string>
+
+    <!-- Heads up snooze toast -->
+    <string name="heads_up_snooze_message_one_minute"><xliff:g id="string">%s</xliff:g> - Heads up notification are snoozing for 1 minute.</string>
+    <string name="heads_up_snooze_message"><xliff:g id="string">%s</xliff:g> - Heads up notifications are snoozing for <xliff:g id="number">%d</xliff:g> minutes.</string>
+
+    <!-- PA Pie controls -->
+    <string name="pie_date_format" translatable="false">ccc, dd MMM yyyy</string>
+    <string name="pie_hour_format_12">hh:mm</string>
+    <string name="pie_hour_format_24">HH:mm</string>
+    <string name="pie_am_pm">a</string>
+
+    <!-- PA Pie Tile -->
+    <string name="quick_settings_pie">Pie</string>
+    <string name="quick_settings_pie_off">Pie off</string>
+    <string name="quick_settings_pie_on">Pie on</string>
+
+    <!-- Path data for Solid battery -->
+    <string name="battery_solid_full" translatable="false">M 12 2 C 17.5228474983 2 22 6.47715250169 22 12 C 22 17.5228474983 17.5228474983 22 12 22 C 6.47715250169 22 2 17.5228474983 2 12 C 2 6.47715250169 6.47715250169 2 12 2 Z</string>
+    <string name="battery_solid_empty" translatable="false">M 12 12 C 12 12 12 12 12 12 C 12 12 12 12 12 12 C 12 12 12 12 12 12 C 12 12 12 12 12 12 Z</string>
+
+    <!-- accessibility label for button to open running apps prefscreen [CHAR LIMIT=NONE] -->
+    <string name="accessibility_quick_settings_running_services">Open Running Services screen.</string>
+
+    <!-- Path data for AOKP battery -->
+    <string name="battery_aokp_clip_path" translatable="false">M 18.92 7.51 C 21.23 7.97 23.42 8.90 25.74 9.25 C 29.20 8.69 32.46 7.10 36.01 7.04 C 39.90 6.85 43.48 8.63 47.24 9.24 C 49.46 8.78 51.57 7.88 53.83 7.61 C 53.27 9.36 52.47 11.05 52.14 12.87 C 53.68 16.48 56.75 19.39 57.47 23.37 C 58.42 28.86 57.88 34.46 57.96 40.00 C 57.81 46.33 58.32 52.67 57.84 58.98 C 57.79 61.78 55.73 64.44 52.86 64.70 C 47.60 65.39 42.28 64.87 37.00 64.96 C 31.38 64.84 25.73 65.40 20.14 64.72 C 17.63 64.48 15.41 62.44 15.24 59.88 C 14.65 54.60 15.13 49.29 15.05 44.00 C 15.16 37.69 14.68 31.35 15.25 25.05 C 15.63 20.39 18.78 16.70 21.20 12.92 C 20.39 11.14 19.63 9.34 18.92 7.51 M 23.73 19.07 C 24.77 20.54 25.85 21.97 26.96 23.37 C 27.83 22.31 28.67 21.24 29.51 20.16 C 27.59 19.74 25.67 19.38 23.73 19.07 M 42.91 20.14 C 42.95 20.82 43.05 22.19 43.09 22.87 C 43.71 22.78 44.95 22.59 45.57 22.50 C 46.39 21.24 47.20 19.98 48.01 18.71 C 46.30 19.18 44.60 19.65 42.91 20.14 Z</string>
+    <string name="battery_aokp_path_empty" translatable="false">M 18.92 7.51 C 21.23 7.97 23.42 8.90 25.74 9.25 C 29.20 8.69 32.46 7.10 36.01 7.04 C 39.90 6.85 43.48 8.63 47.24 9.24 C 49.46 8.78 51.57 7.88 53.83 7.61 C 53.27 9.36 52.47 11.05 52.14 12.87 C 53.68 16.48 56.75 19.39 57.47 23.37 C 58.42 28.86 57.88 34.46 57.96 40.00 C 57.81 46.33 58.32 52.67 57.84 58.98 C 57.79 61.78 55.73 64.44 52.86 64.70 C 47.60 65.39 42.28 64.87 37.00 64.96 C 31.38 64.84 25.73 65.40 20.14 64.72 C 17.63 64.48 15.41 62.44 15.24 59.88 C 14.65 54.60 15.13 49.29 15.05 44.00 C 15.16 37.69 14.68 31.35 15.25 25.05 C 15.63 20.39 18.78 16.70 21.20 12.92 C 20.39 11.14 19.63 9.34 18.92 7.51 M 23.73 19.07 C 24.77 20.54 25.85 21.97 26.96 23.37 C 27.83 22.31 28.67 21.24 29.51 20.16 C 27.59 19.74 25.67 19.38 23.73 19.07 M 42.91 20.14 C 42.95 20.82 43.05 22.19 43.09 22.87 C 43.71 22.78 44.95 22.59 45.57 22.50 C 46.39 21.24 47.20 19.98 48.01 18.71 C 46.30 19.18 44.60 19.65 42.91 20.14 Z</string>
+    <string name="battery_aokp_path_frame" translatable="false">M 18.92 7.51 C 21.23 7.97 23.42 8.90 25.74 9.25 C 29.20 8.69 32.46 7.10 36.01 7.04 C 39.90 6.85 43.48 8.63 47.24 9.24 C 49.46 8.78 51.57 7.88 53.83 7.61 C 53.27 9.36 52.47 11.05 52.14 12.87 C 53.68 16.48 56.75 19.39 57.47 23.37 C 58.42 28.86 57.88 34.46 57.96 40.00 C 57.81 46.33 58.32 52.67 57.84 58.98 C 57.79 61.78 55.73 64.44 52.86 64.70 C 47.60 65.39 42.28 64.87 37.00 64.96 C 31.38 64.84 25.73 65.40 20.14 64.72 C 17.63 64.48 15.41 62.44 15.24 59.88 C 14.65 54.60 15.13 49.29 15.05 44.00 C 15.16 37.69 14.68 31.35 15.25 25.05 C 15.63 20.39 18.78 16.70 21.20 12.92 C 20.39 11.14 19.63 9.34 18.92 7.51 M 23.73 19.07 C 24.77 20.54 25.85 21.97 26.96 23.37 C 27.83 22.31 28.67 21.24 29.51 20.16 C 27.59 19.74 25.67 19.38 23.73 19.07 M 42.91 20.14 C 42.95 20.82 43.05 22.19 43.09 22.87 C 43.71 22.78 44.95 22.59 45.57 22.50 C 46.39 21.24 47.20 19.98 48.01 18.71 C 46.30 19.18 44.60 19.65 42.91 20.14 Z</string>
+
+    <!-- Kill button in notification guts -->
+    <string name="force_stop_dlg_title">Force stop?</string>
+    <string name="force_stop_dlg_text">If you force stop an app, it may misbehave.</string>
+    <string name="dlg_ok">OK</string>
+    <string name="dlg_cancel">Cancel</string>
+    <string name="kill">Kill App</string>
+
+    <!-- volte icon switch -->
+    <string name="status_bar_volte">VOLTE</string>
+
+    <string name="recents_custom_android_n">CLEAR ALL</string>
+
+</resources>

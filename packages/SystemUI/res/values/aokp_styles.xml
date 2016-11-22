@@ -81,6 +81,7 @@
         <item name="android:textStyle">normal</item>
     </style>
 
+
     <!-- Phyisical Keyboard Dialog style -->
     <style name="KeyboardShortcutsDialog" parent="@*android:style/Theme.DeviceDefault.Light" />
 

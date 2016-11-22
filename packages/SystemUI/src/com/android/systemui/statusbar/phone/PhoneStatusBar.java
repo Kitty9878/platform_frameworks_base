@@ -488,8 +488,114 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
 
         void observe() {
             ContentResolver resolver = mContext.getContentResolver();
-            resolver.registerContentObserver(CMSettings.Global.getUriFor(
-                    CMSettings.Global.DEV_FORCE_SHOW_NAVBAR), false, this, UserHandle.USER_ALL);
+
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.BATTERY_SAVER_MODE_COLOR),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.APP_SIDEBAR_POSITION),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.Secure.getUriFor(
+                   Settings.Secure.QS_ROWS_PORTRAIT),
+                   false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.Secure.getUriFor(
+                   Settings.Secure.QS_ROWS_LANDSCAPE),
+                   false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.Secure.getUriFor(
+                   Settings.Secure.QS_COLUMNS),
+                   false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.NAV_BAR_DYNAMIC),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.STATUS_BAR_AOKP_LOGO),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.STATUS_BAR_AOKP_LOGO_COLOR),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.STATUS_BAR_AOKP_LOGO_STYLE),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.LOCKSCREEN_MAX_NOTIF_CONFIG),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                   Settings.System.DT2L_CAMERA_VIBRATE_CONFIG),
+                   false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.Secure.getUriFor(
+                    Settings.System.BLUR_SCALE_PREFERENCE_KEY),
+                    false, this);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.BLUR_RADIUS_PREFERENCE_KEY),
+                    false, this);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.TRANSLUCENT_QUICK_SETTINGS_PREFERENCE_KEY),
+                    false, this);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.TRANSLUCENT_QUICK_SETTINGS_PRECENTAGE_PREFERENCE_KEY),
+                    false, this);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.STATUS_BAR_EXPANDED_ENABLED_PREFERENCE_KEY),
+                    false, this);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.TRANSLUCENT_NOTIFICATIONS_PREFERENCE_KEY),
+                    false, this);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.TRANSLUCENT_NOTIFICATIONS_PRECENTAGE_PREFERENCE_KEY),
+                    false, this,
+                    UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.TRANSLUCENT_HEADER_PREFERENCE_KEY),
+                    false, this);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.TRANSLUCENT_HEADER_PRECENTAGE_PREFERENCE_KEY),
+                    false, this,
+                    UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.RECENT_APPS_ENABLED_PREFERENCE_KEY),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.RECENT_APPS_SCALE_PREFERENCE_KEY),
+                    false, this);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.RECENT_APPS_RADIUS_PREFERENCE_KEY),
+                    false, this);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.STATUS_BAR_CUSTOM_HEADER_SHADOW),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.STATUS_BAR_CUSTOM_HEADER),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.BLUR_DARK_COLOR_PREFERENCE_KEY),
+                    false, this);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.BLUR_LIGHT_COLOR_PREFERENCE_KEY),
+                    false, this);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.BLUR_MIXED_COLOR_PREFERENCE_KEY),
+                    false, this);
+            mContext.getContentResolver().registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.QS_QUICKBAR_SCROLL_ENABLED),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.NAVBAR_TINT_SWITCH),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.NAVBAR_BUTTON_COLOR),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.NAVBAR_BUTON_CUSTOM_ICON_SWITCH),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.CLEAR_RECENTS_STYLE),
+                    false, this, UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.CLEAR_RECENTS_STYLE_ENABLE),
+                    false, this, UserHandle.USER_ALL);
+            update();
+        }
+
 
             CurrentUserTracker userTracker = new CurrentUserTracker(mContext) {
                 @Override
@@ -501,8 +607,79 @@ public class PhoneStatusBar extends BaseStatusBar implements DemoMode,
         }
 
         @Override
-        public void onChange(boolean selfChange) {
-            super.onChange(selfChange);
+
+        public void onChange(boolean selfChange, Uri uri) {
+            ContentResolver resolver = mContext.getContentResolver();
+
+            if (uri.equals(Settings.System.getUriFor(
+                    Settings.System.BATTERY_SAVER_MODE_COLOR))) {
+                    mBatterySaverWarningColor = Settings.System.getIntForUser(
+                            resolver, Settings.System.BATTERY_SAVER_MODE_COLOR,
+                            1, UserHandle.USER_CURRENT);
+                    if (mBatterySaverWarningColor != 0) {
+                        mBatterySaverWarningColor = mContext.getResources()
+                                .getColor(com.android.internal.R.color.battery_saver_mode_color);
+                    }
+            } else if (uri.equals(Settings.Secure.getUriFor(
+                    Settings.Secure.QS_ROWS_PORTRAIT))
+                    || uri.equals(Settings.Secure.getUriFor(
+                    Settings.Secure.QS_ROWS_LANDSCAPE))) {
+                    updateResources();
+            } else if (uri.equals(Settings.Secure.getUriFor(
+                    Settings.Secure.QS_COLUMNS))) {
+                    if (mHeader != null) {
+                        mHeader.updateSettings();
+                    }
+                    updateResources();
+            } else if (uri.equals(Settings.System.getUriFor(
+                      Settings.System.NAV_BAR_DYNAMIC))) {
+                      mNavigationController.updateNavbarOverlay(mContext.getResources());
+            } else if (uri.equals(Settings.System.getUriFor(
+                    Settings.System.TRANSLUCENT_HEADER_PREFERENCE_KEY))) {
+                    mTranslucentHeader = Settings.System.getIntForUser(
+                                        mContext.getContentResolver(),
+                                        Settings.System.TRANSLUCENT_HEADER_PREFERENCE_KEY,
+                                        0, UserHandle.USER_CURRENT) == 1;
+                    updateRowStates();
+                    updateSpeedbump();
+                    updateClearAll();
+                    updateEmptyShadeView();
+            } else if (uri.equals(Settings.System.getUriFor(
+                    Settings.System.TRANSLUCENT_QUICK_SETTINGS_PREFERENCE_KEY))) {
+                    mTranslucentQuickSettings = Settings.System.getIntForUser(
+                                        mContext.getContentResolver(),
+                                        Settings.System.TRANSLUCENT_QUICK_SETTINGS_PREFERENCE_KEY,
+                                        0, UserHandle.USER_CURRENT) == 1;
+                    updateRowStates();
+                    updateSpeedbump();
+                    updateClearAll();
+                    updateEmptyShadeView();
+            } else if (uri.equals(Settings.System.getUriFor(
+                    Settings.System.RECENT_APPS_ENABLED_PREFERENCE_KEY))) {
+                    mBlurredRecents = Settings.System.getIntForUser(
+                                        mContext.getContentResolver(),
+                                        Settings.System.RECENT_APPS_ENABLED_PREFERENCE_KEY,
+                                        0, UserHandle.USER_CURRENT) == 1;
+                    RecentsActivity.startBlurTask();
+                    updatePreferences(mContext);
+            } else if (uri.equals(Settings.System.getUriFor(
+                    Settings.System.NAVBAR_TINT_SWITCH))
+                    || uri.equals(Settings.System.getUriFor(
+                    Settings.System.NAVBAR_BUTTON_COLOR))
+                    || uri.equals(Settings.System.getUriFor(
+                    Settings.System.NAVBAR_BUTON_CUSTOM_ICON_SWITCH))) {
+                    mNavigationController.updateNavbarOverlay(mContext.getResources());
+            } else if (uri.equals(Settings.System.getUriFor(
+                    Settings.System.CLEAR_RECENTS_STYLE))
+                    || uri.equals(Settings.System.getUriFor(
+                    Settings.System.CLEAR_RECENTS_STYLE_ENABLE))) {
+                    updateRowStates();
+                    updateSpeedbump();
+                    checkBarModes();
+                    updateClearAll();
+                    updateEmptyShadeView();
+            }
+
             update();
         }
 
